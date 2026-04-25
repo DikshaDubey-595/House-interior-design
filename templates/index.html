@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -182,4 +183,190 @@
 
    
 </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interior design</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{url_for ('static',filename='style.css')}}">
+<script src="{{url_for('static',filename='index.js')}}">s</script>
+</head>
+<body>
+    <section class="homepg" id="HOME">
+        <div class="navbar">
+            <div class="logo">BEINTERIOR</div>
+            <nav class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="#HOME">HOME</a></li>
+                    <li><a href="#ABOUT">ABOUT</a></li>
+                    <li><a href="#SERVICES">SERVICES</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                    <li><a href="#BLOG">BLOG</a></li>
+                </ul>
+            </nav>
+            <div class="BURGER">&#9776</div>
+            </div>
+            <div class="content">
+                <h1 class="heading"> LUXURIOUS<span> CREATIVE AND<br> COMFORTABLE </span>INTERIOR</h1>
+                <p class="para"> respnsible for the layout of the interior space in a building or structure
+                    <br>the design impact on the wellbeing, safety and function of the interior.</P>
+                    <button class="btn">DOWNLOAD NOW</button>
+            </div>
+        
+    </section>
+    <!---icons-->
+    <section class="icons-col">
+<div class="icons">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-linkdin"></i>
+    <i class="fab fa-instagram"></i>
+</div>
+    </section>
+    <!--about-->
+    <section class="sec " id="ABOUT">
+        <h1 class="heading">ABOUT US</h1>
+        <div class="sub_heading">
+            <h1 class="heading">provding <span>everything you need</span>Best creative solutionfor your space</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex fugit omnis, dolorem facilis
+                 cupiditate temporibus ullam assumenda sit, dicta enim consequuntur molestias eius velit 
+                 numquam qui necessitatibus. Reiciendis, exercitationem odio.<br> Lorem ipsum dolor sit 
+                 amet consectetur adipisicing elit. Harum, quod deserunt. Necessitatibus id deleniti,
+                  temporibus alias quas iusto facilis doloremque beatae sint corrupti consequuntur ipsum
+                   unde possimus quis, aliquid porro.
+            </p>
+        </div>
+        <div class="box">
+            <div class="A_box">
+               <h1> interior desgin you don't have to imagine</h1>
+               <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas quis possimus ut,
+                 quas natus quaerat consequatur amet iusto fuga velit quisquam provident nihil vero,
+                  ullam odio animi deleniti dolorem saepe?
+               </p>
+               <button class="btn btn1">More Details</button>
+            </div>
+            <img src="{{ url_for('static', filename='img/img2.jpg') }}"alt="house" height="490" width="570">
+        </div>
+    </section>
+    <!--services-->
+    <section class="sec" id="SERVICES">
+        <h1 class="heading"> help you transform your <br> <span> space into fresh</span>one</h1>
+        <div class="services_box">
+            <div class="boxes">
+                <img src="{{ url_for('static', filename='img/img3.jpg') }}" alt="" height="230px" width="20px">
+                <h1>interior design</h1>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam at eum ex, 
+                    quam commodi ipsa assumenda obcaecati! Quis iure consequuntur doloribus, iusto 
+                    dolorum, debitis illo aliquam odit iste, nobis cupiditate!</p>
+                    <a href="">learn more </a>
+            </div>
+            <div class="boxes">
+                <img src="{{ url_for('static', filename='img/img4.jpg') }}" alt="" height="230px" width="20px">
+                <h1>interior styling</h1>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam at eum ex, 
+                    quam commodi ipsa assumenda obcaecati! Quis iure consequuntur doloribus, iusto 
+                    dolorum, debitis illo aliquam odit iste, nobis cupiditate!</p>
+                    <a href="">learn more </a>
+            </div>
+            <div class="boxes">
+                <img src="{{ url_for('static', filename='img/img5.jpg') }}" alt="" height="230px" width="20px">
+                <h1>interior architecture</h1>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam at eum ex, 
+                    quam commodi ipsa assumenda obcaecati! Quis iure consequuntur doloribus, iusto 
+                    dolorum, debitis illo aliquam odit iste, nobis cupiditate!</p>
+                    <a href="">learn more </a>
+            </div>
+        </div>
+    </section>
+    <!--contact-->
+    <section class="sec" id="CONTACT">
+        <h1 class="heading">We bring life <br> to your <span> dream sapce</span></h1>
+        <div class="contact_sec">
+            <div class="contact_box">
+                <h2 class="heading"> contact us</h2>
+                
+                <form action="/contact" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button class="btn btn2" type="submit">Submit</button>
+
+</form>
+               <!--- <input type="text" name="text" placeholder="name">
+                 <input type="email" name="email" placeholder="email">
+                 <textarea name="text" id="" placeholder="text"></textarea>
+                 <button class="btn btn2">submit</button>--->
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d946535.
+                7021105508!2d76.837499!3d22.07234155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!5e0!3m2!1sen!2sin!4v1776076171588!5m2!1sen!2sin" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"> </iframe>
+            </div>
+        </div>
+    </section>
+    <!--_____blog-->
+    <section class="sec " id="BLOG">
+        <h1 class="heading">we design <span> indoor<br> spaces for</span>living</h1>
+        <div class="gallery-container">
+        <div class="image"><img src="{{ url_for('static', filename='img/img10.jpg') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/img9.webp') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/img8.webp') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/img7.jpg') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/img6.jpg') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/img11.jpg') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/img4.jpg') }}" alt=""></div>
+        <div class="image"><img src="{{ url_for('static', filename='img/IMG12.jpg') }}" alt=""></div>
+        <div class="gall">
+            <h1>BLOG</h1>
+            <p>work spaces & <br> interior design </p>
+        </div>
+        </div>
+    </section>
+    <!-- footer-->
+     <section>
+        <div class="footer">
+            <div class="f-box">
+                <h2>information</h2>
+                <li><a href="#ABOUT">About Us</a></li>
+                <li><a href="#SERVICES">Services</a></li>
+                <li><a href="#CONTACT">Contact</a></li>
+                <li><a href="#BLOG">Blog</a></li>
+            </div>
+                
+                 <div class="f-box">
+                 <h2>Useful link</h2>
+                 <ul>
+                  <li><a href="/privacy"> privacy policy</a></li>
+                   <li><a href="/terms">terms & conditions</a></li></ul>
+                   </div>
+
+                    <div class="f-box">
+                 <h2>Get in touch</h2>
+                 <li><a>A_startup@gmail.com</a></li>
+                 <li><a>+91 9087693318</a></li>
+                 <li><a>Bhopal, Madhya Pradesh</a></li>
+                 <li><a>24/7 support</a></li>
+                    </div>
+
+            
+        </div>
+     </section>
+     <footer>copyright @ 2026 created by Diksha Dubey</footer>
+    <script src="index.js"></script>
+
+   
+</body>
+
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,4 +52,56 @@
 </table>
 
 </body>
-</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+            padding:20px;
+        }
+        h1{
+            text-align:center;
+        }
+        table{
+            width:100%;
+            border-collapse: collapse;
+            background:white;
+        }
+        th,td{
+            border:1px solid #ddd;
+            padding:10px;
+            text-align:center;
+        }
+        th{
+            background:black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Contact Messages</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+    </tr>
+
+    {% for c in contacts %}
+    <tr>
+        <td>{{ c[0] }}</td>
+        <td>{{ c[1] }}</td>
+        <td>{{ c[2] }}</td>
+        <td>{{ c[3] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>

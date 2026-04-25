@@ -100,8 +100,8 @@ text-align: center;
     background-color: #e5aa70;
     font-weight: 400;
     cursor: pointer;
-    display: block;        /* important */
-    width: fit-content;    /* button jitna hi width */
+    display: block;        
+    width: fit-content;    
     margin: 20px auto; 
 
 }
