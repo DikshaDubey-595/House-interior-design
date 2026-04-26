@@ -89,7 +89,7 @@ color: aliceblue;
 .para{
     font-size: 19px;
 padding: 16px 0;
-text-align: center;
+
 }
 .btn{
     text-decoration: none;
@@ -100,9 +100,7 @@ text-align: center;
     background-color: #e5aa70;
     font-weight: 400;
     cursor: pointer;
-    display: block;        
-    width: fit-content;    
-    margin: 20px auto; 
+    
 
 }
 .btn:hover{
@@ -479,43 +477,34 @@ width: 90%;
     min-height: 100vh;
 }
 } 
-/* BODY STYLE */
-body {
+body{
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
     margin: 0;
     padding: 0;
-    
+    background: #f9f9f9;
 }
 
-/* MAIN CONTAINER */
-.container {
+.policy{
     width: 70%;
-    margin: 50px auto;
-    background: #fff;
-    padding: 30px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid green;
 }
 
-/* HEADING */
-.container h1 {
+.policy h1{
     text-align: center;
-    color: #333;
     margin-bottom: 20px;
-    border: 2px solid blue;
 }
 
-/* PARAGRAPH */
-.container p {
-    color: #555;
+.policy h3{
+    margin-top: 20px;
+    color: #333;
+}
+
+.policy p{
     line-height: 1.6;
-    margin-bottom: 15px;
-    border: 2px solid orange;
+    color: #555;
 }
-
-   .heading {
-    text-align: center;
-}
-
