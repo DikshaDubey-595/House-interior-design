@@ -29,7 +29,11 @@
                 <h1 class="heading"> LUXURIOUS<span> CREATIVE AND<br> COMFORTABLE </span>INTERIOR</h1>
                 <p class="para"> respnsible for the layout of the interior space in a building or structure
                     <br>the design impact on the wellbeing, safety and function of the interior.</P>
-                    <button class="btn">DOWNLOAD NOW</button>
+                   <a href="{{ url_for('static', filename='files/brochure.pdf') }}" download class="btn">
+   Download 
+</a>
+
+                    
             </div>
         
     </section>
@@ -68,7 +72,7 @@
                 solutions. From vision to reality, we design elegant and customized spaces that match
                  your style, comfort, and lifestyle—so you don’t just imagine your dream home, you live it.
                </p>
-               <button class="btn btn1">More Details</button>
+              <a href="/about-details" class="btn btn1">More Details</a>
             </div>
             <img src="{{ url_for('static', filename='img/img2.jpg') }}"alt="house" height="490" width="570">
         </div>
@@ -81,19 +85,19 @@
                 <img src="{{ url_for('static', filename='img/img3.jpg') }}" alt="" height="230px" width="20px">
                 <h1>interior design</h1>
                 <p> We create beautiful, functional, and modern interiors that perfectly match your lifestyle and needs. Our designs turn your space into a comfortable and inspiring home.</p>
-                    <a href="">learn more </a>
+                    <a href="/interior-design" class="learn-btn">Learn More</a>
             </div>
             <div class="boxes">
                 <img src="{{ url_for('static', filename='img/img4.jpg') }}" alt="" height="230px" width="20px">
                 <h1>interior styling</h1>
                 <p> We enhance your space with the right colors, furniture, and decor to give it a stylish and elegant look that feels warm and personalized.</p>
-                    <a href="">learn more </a>
+                   <a href="/interior-styling" class="learn-btn">Learn More</a>
             </div>
             <div class="boxes">
                 <img src="{{ url_for('static', filename='img/img5.jpg') }}" alt="" height="230px" width="20px">
                 <h1>interior architecture</h1>
                 <p> We enhance your space with the right colors, furniture, and decor to give it a stylish and elegant look that feels warm and personalized.</p>
-                    <a href="">learn more </a>
+                    <a href="/interior-architecture" class="learn-btn">Learn More</a>
             </div>
         </div>
     </section>
@@ -166,8 +170,8 @@
 
                     <div class="f-box">
                  <h2>Get in touch</h2>
-                 <li><a>A_startup@gmail.com</a></li>
-                 <li><a>+91 9087693318</a></li>
+                 <li><a>BEINTERIOR@gmail.com</a></li>
+                 <li><a>+91 90875XXXX</a></li>
                  <li><a>Bhopal, Madhya Pradesh</a></li>
                  <li><a>24/7 support</a></li>
                     </div>
@@ -175,7 +179,7 @@
             
         </div>
      </section>
-     <footer>copyright @ 2026 created by Diksha Dubey</footer>
+     <footer> @ 2026 BEINTERIOR | All Rights Reserved</footer>
     <script src="index.js"></script>
 
    

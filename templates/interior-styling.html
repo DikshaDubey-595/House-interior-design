@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interior Styling</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header{
+    height:60vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("{{ url_for('static', filename='img/img4.jpg') }}");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.header h1{
+    font-size:40px;
+}
+
+/* CONTAINER */
+.container{
+    width:85%;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* SECTION */
+.section{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+    transition:0.3s;
+}
+
+.section:hover{
+    transform:translateY(-8px);
+}
+
+/* ROW */
+.row{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.row img{
+    width:45%;
+    border-radius:10px;
+}
+
+.row p{
+    width:55%;
+    line-height:1.7;
+}
+
+/* HEADINGS */
+h2{
+    color:#e5aa70;
+    margin-bottom:10px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.feature-box{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    background:#e5aa70;
+    color:white;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#e5aa70;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:black;
+    color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .row{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .row img,
+    .row p{
+        width:100%;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .header h1{
+        font-size:25px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Interior Styling</h1>
+</div>
+
+<div class="container">
+
+    <!-- About -->
+    <div class="section">
+        <h2>About Interior Styling</h2>
+        <div class="row">
+            <img src="{{ url_for('static', filename='img/img6.jpg') }}">
+            <p>
+                Interior styling focuses on enhancing the beauty and feel of your space using 
+                colors, furniture, lighting, and decorative elements. We transform ordinary rooms 
+                into stylish and elegant spaces that reflect your personality and taste.
+            </p>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+        <h2>What We Offer</h2>
+        <div class="features">
+            <div class="feature-box">Color Selection</div>
+            <div class="feature-box">Furniture Styling</div>
+            <div class="feature-box">Decor Accessories</div>
+            <div class="feature-box">Lighting Setup</div>
+            <div class="feature-box">Space Enhancement</div>
+            <div class="feature-box">Theme Design</div>
+        </div>
+    </div>
+
+    <!-- Process -->
+    <div class="section">
+        <h2>Our Styling Process</h2>
+        <p>
+            1. Understanding Your Style <br>
+            2. Selecting Colors & Theme <br>
+            3. Choosing Furniture & Decor <br>
+            4. Styling & Arrangement <br>
+            5. Final Finishing Touch
+        </p>
+    </div>
+
+    <a href="/" class="btn">⬅ Back to Home</a>
+
+</div>
+
+</body>
+</html>

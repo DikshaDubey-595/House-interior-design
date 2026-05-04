@@ -1,35 +1,32 @@
-
 from flask import Flask, render_template, request
 import sqlite3
 import os
 
 app = Flask(__name__)
 
-# Database create
-def init_db():
-    conn = sqlite3.connect('interior.db')
-    cursor = conn.cursor()
-
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS contacts (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,
-        email TEXT,
-        message TEXT
-    )
-    ''')
-
-    conn.commit()
-    conn.close()
-
-init_db()
-
 # Home
 @app.route('/')
 def home():
     return render_template('index.html')
 
-# Contact form
+# ✅ ABOUT DETAILS ROUTE (IMPORTANT)
+@app.route('/about-details')
+def about_details():
+    return render_template('about-details.html')
+
+@app.route('/interior-design')
+def interior_design():
+    return render_template('interior-design.html')
+
+@app.route('/interior-styling')
+def interior_styling():
+    return render_template('interior-styling.html')
+
+@app.route('/interior-architecture')
+def interior_architecture():
+    return render_template('interior-architecture.html')
+
+# Contact
 @app.route('/contact', methods=['POST'])
 def contact():
     name = request.form['name']
@@ -47,29 +44,6 @@ def contact():
 
     return f"Thank you {name}, your message has been saved ✅"
 
-# Admin
-@app.route('/admin')
-def admin():
-    conn = sqlite3.connect('interior.db')
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT * FROM contacts")
-    data = cursor.fetchall()
-
-    conn.close()
-
-    return render_template('admin.html', contacts=data)
-
-# Other pages
-@app.route('/privacy')
-def privacy():
-    return render_template('privacy.html')
-
-@app.route('/terms')
-def terms():
-    return render_template('terms.html')
-
-# RUN (RENDER FIXED)
+# Run
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True)

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Details</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(45deg, #e5aa70, #ff7f50);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Sections */
+.section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* Row layout */
+.row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Images */
+.row img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+/* Text */
+.row p {
+    width: 55%;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Headings */
+h2 {
+    color: #e5aa70;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e5aa70;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+/* 🔥 RESPONSIVE START */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .row img {
+        width: 100%;
+    }
+
+    .row p {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .row p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Interior Design Details</h1>
+    <p>Creative • Modern • Functional Spaces</p>
+</div>
+
+<div class="container">
+
+    <!-- Who We Are -->
+    <div class="section">
+        <h2>Who We Are</h2>
+        <div class="row">
+            <img src="{{ url_for('static', filename='img/img3.jpg') }}">
+            <p>
+                We are a professional interior design studio focused on transforming spaces into 
+                elegant, functional, and comfortable environments. Our team combines creativity 
+                with modern design techniques to deliver high-quality results tailored to client needs.
+            </p>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="section">
+        <h2>Our Services</h2>
+        <div class="row">
+            <img src="{{ url_for('static', filename='img/img4.jpg') }}">
+            <p>
+                • Residential Interior Design <br>
+                • Commercial & Office Design <br>
+                • Modular Kitchen Planning <br>
+                • Furniture & Decor Selection <br>
+                • 3D Design Visualization <br>
+                • Complete Project Execution
+            </p>
+        </div>
+    </div>
+
+    <!-- Process -->
+    <div class="section">
+        <h2>Our Working Process</h2>
+        <div class="row">
+            <img src="{{ url_for('static', filename='img/img5.jpg') }}">
+            <p>
+                1. Understanding Client Requirements <br>
+                2. Planning & Designing Layout <br>
+                3. 3D Visualization & Approval <br>
+                4. Material Selection <br>
+                5. Execution & Final Delivery
+            </p>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="section">
+        <h2>Why Choose Us</h2>
+        <div class="row">
+            <img src="{{ url_for('static', filename='img/img6.jpg') }}">
+            <p>
+                ✔ Creative & Unique Designs <br>
+                ✔ Affordable Pricing <br>
+                ✔ Professional Team <br>
+                ✔ Timely Project Delivery <br>
+                ✔ Customer Satisfaction Guarantee
+            </p>
+        </div>
+    </div>
+
+    <!-- Vision -->
+    <div class="section">
+        <h2>Our Vision</h2>
+        <div class="row">
+            <img src="{{ url_for('static', filename='img/img7.jpg') }}">
+            <p>
+                Our vision is to become a leading interior design brand known for innovation, 
+                creativity, and excellence in delivering modern and stylish interiors.
+            </p>
+        </div>
+    </div>
+
+    <a href="/" class="btn">⬅ Back to Home</a>
+
+</div>
+
+</body>
+</html>
