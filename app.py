@@ -13,7 +13,7 @@ def home():
 @app.route('/about-details')
 def about_details():
     return render_template('about-details.html')
-
+#services
 @app.route('/interior-design')
 def interior_design():
     return render_template('interior-design.html')
